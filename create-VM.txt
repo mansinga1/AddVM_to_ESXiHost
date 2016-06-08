@@ -1,0 +1,32 @@
+- hosts: 127.0.0.1
+  connection: local
+  user: root
+  sudo: false
+  gather_facts: false
+  serial: 1
+
+  tasks:
+  - vsphere_guest:
+      vcenter_hostname: vsphere.local
+      username: administrator@vsphere.local
+      password: Okuonghae1
+      guest: testansible
+      state: powered_on
+      vm_disk:
+        disk1:
+        size_gb: 1
+        type: thin
+        datastore: MyDataStore
+      vm_nic:
+        nic1:
+        type: vmxnet3
+        network: vm
+        network_type: standard
+      vm_hardware:
+        memory_mb: 1024
+        num_cpus: 1
+        osid: ubuntu64Guest
+        scsi: paravirtual
+      esxi:
+        datacenter: Demo Datacenter
+        hostname: localhost.localdomain
