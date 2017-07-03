@@ -5,16 +5,16 @@
   tasks:
   - vsphere_guest:
       vcenter_hostname: ukrdvmgvc001.dbpoc.uk
-      username: isibor@dbpoc.uk
-      password: Integration12
+      username: wake@dbpoc.uk
+      password: Start1235
       validate_certs: no
-      guest: jojjtestansible
+      guest: testansible
       state: powered_on
       vm_disk:
         disk1:
           size_gb: 20
           type: thin
-          datastore: ukrd_esx_mgmt_data_001
+          datastore: Test_datastore
       vm_nic:
          nic1:
           type: vmxnet3
@@ -26,6 +26,6 @@
         osid: ubuntu64Guest
         scsi: paravirtual
       esxi:
-        datacenter: Reading-Dev
-        hostname: ukrdsesxi001.dbpoc.uk
+        datacenter: Synergy_Poc
+        hostname: 10.0.5.98
 
