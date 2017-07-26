@@ -27,5 +27,5 @@
         scsi: paravirtual
       esxi:
         datacenter: Synergy_Poc
-        hostname: 10.0.5.98
+        hostname: 10.0.5.91
 
