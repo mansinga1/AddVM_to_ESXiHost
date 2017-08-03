@@ -6,7 +6,7 @@
   - vsphere_guest:
       vcenter_hostname: ukrdvmgvc001.dbpoc.uk
       username: wake@dbpoc.uk
-      password: Start1235
+      password: Start1234
       validate_certs: no
       guest: testansible
       state: powered_on
