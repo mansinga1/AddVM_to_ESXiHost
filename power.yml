@@ -2,21 +2,21 @@
   connection: local
   gather_facts: True
   
-  vars:
-    password: 'Integration12'
+  #  vars:
+  #  password: 'Integration12'
   tasks:
-    - name: Include all variable files
-      include_vars:
-        dir: 'vars' #change directory if needed
-        extensions:
-          - yml
+  - name: Include all variable files
+    include_vars:
+      dir: 'vars' #change directory if needed
+      extensions:
+        - yml
   - vsphere_guest:
       vcenter_hostname: ukrdvmgvc001.dbpoc.uk
       username: isibor@dbpoc.uk
       password: "{{ password }}"
       validate_certs: no
       guest: jojjtestansible
-      state: powered_off
+      state: powered_on
       esxi:
         datacenter: Reading-Dev
         hostname: ukrdsesxi001.dbpoc.uk
